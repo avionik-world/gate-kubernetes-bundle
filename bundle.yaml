@@ -55,7 +55,7 @@ spec:
       - image: ghcr.io/minekube/gate:latest
         name: gate
         command: ["/bin/sh"]
-        args: ["-c", "chmod -R 755 /data && chown 1000:1000 /data"]
+        args: ["-c", "chmod -R 755 /gate && chown 1000:1000 /gate"]
         ports:
         - containerPort: 25565
           name: minecraft
