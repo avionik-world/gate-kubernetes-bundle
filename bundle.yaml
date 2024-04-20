@@ -54,8 +54,11 @@ spec:
       containers:
       - image: ghcr.io/minekube/gate:latest
         name: gate
-        command: ["chmod"]
-        args: ["-R", "755", "/gate"]
+        command:
+        - /bin/chmod
+        - "-R"
+        - "755"
+        - "/gate"
         ports:
         - containerPort: 25565
           name: minecraft
