@@ -61,9 +61,10 @@ spec:
         - mountPath: /gate
           name: config
           subPath: config.yml
+        securityContext:
+          runAsUser: 1000  
+          runAsGroup: 1000
       volumes:
       - configMap:
           name: gate-config
         name: config
-      securityContext:
-        runAsNonRoot: true
