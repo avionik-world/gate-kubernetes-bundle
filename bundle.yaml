@@ -59,7 +59,6 @@ spec:
           name: minecraft
         volumeMounts:
         - mountPath: /gate
-          readOnly: true
           name: config
           subPath: config.yml
       volumes:
