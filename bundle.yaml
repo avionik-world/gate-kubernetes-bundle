@@ -65,3 +65,5 @@ spec:
       - configMap:
           name: gate-config
         name: config
+      securityContext:
+        runAsNonRoot: true
