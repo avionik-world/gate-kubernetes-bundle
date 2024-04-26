@@ -63,5 +63,5 @@ spec:
           subPath: config.yml
       volumes:
       - configMap:
-          name: gate-config-8bh2kdmfmd
+          name: gate-config
         name: config
