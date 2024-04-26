@@ -54,19 +54,14 @@ spec:
       containers:
       - image: ghcr.io/minekube/gate:latest
         name: gate
-        command:
-        - /bin/chmod
-        - "-R"
-        - "755"
-        - "/gate"
         ports:
         - containerPort: 25565
           name: minecraft
         volumeMounts:
-        - mountPath: /gate
+        - mountPath: /gate/config.yml
           name: config
           subPath: config.yml
       volumes:
       - configMap:
-          name: gate-config
+          name: gate-config-8bh2kdmfmd
         name: config
